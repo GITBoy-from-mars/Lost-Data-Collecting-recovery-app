@@ -6,7 +6,7 @@ Check ADB Availability: The script verifies whether ADB is installed and accessi
 
 Check Device Connection: It runs adb devices to check if an Android device is connected and authorized. If a device is found, it retrieves the device's name using adb shell getprop ro.product.model.
 
-Google Drive Authentication: The script authenticates with Google Drive using OAuth 2.0 credentials stored in wapcos.json. If a valid token does not exist, it prompts the user to log in and saves the token for future use.
+Google Drive Authentication: The script authenticates with Google Drive using OAuth 2.0 credentials stored in cred.json. If a valid token does not exist, it prompts the user to log in and saves the token for future use.
 
 Find .xml Files on the Device: Using the ADB find command, it searches for all .xml files in the path /sdcard/Android/data/your directory/.
 
@@ -45,7 +45,7 @@ Configurable Input & Output Paths: Allows easy customization of the input folder
 
 Ensures Unique Column Headers: Aggregates all possible XML field names across multiple files to maintain consistency in the final dataset.
 
-Loop-Based Batch Processing: Can iterate through multiple project folders (path3 to path16 in the Wapcos project) for bulk conversions.
+Loop-Based Batch Processing: Can iterate through multiple project folders (path3 to path16 in the project dir.) for bulk conversions.
 
 
 **Note** - The xmltoexcel.py, xmltoexcel1.py, xmltoexcel2.py the work of these files are same as mentioned above but the key diffrence is some of my data contain complex .xml data and child data so i divided this in three parts and do some updates also according to data
@@ -62,7 +62,7 @@ The script named arrange.py automates the collection, renaming, and consolidatio
 Key Features & Workflow
 Fetch & Rename Excel Files:
 
-Searches for combined result.xlsx in path1 to path N directories inside the Wapcos project.
+Searches for combined result.xlsx in path1 to path N directories inside the project dir...
 
 Renames files to "Combined result of Output of pathX.xlsx" for clarity.
 
